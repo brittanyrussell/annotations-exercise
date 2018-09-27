@@ -3,7 +3,7 @@
  */
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity
 public class Author extends Person {
     private List books;
 
@@ -14,8 +14,9 @@ public class Author extends Person {
 
     /**
      * @deprecated Use publishedBooks instead
+     *
      */
-
+    @SuppressWarnings("deprecation")
     public List<String> getBooks() {
         return books;
     }
@@ -28,7 +29,7 @@ public class Author extends Person {
         books.add(book);
     }
 
-
+    @Deprecated
     public String sortName() {
         return String.format("%s, %s", lastName, firstName);
     }

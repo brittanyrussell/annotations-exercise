@@ -9,7 +9,7 @@ public class Person {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
+    @Deprecated
     public String fullName() {
         return String.format("%s %s", firstName, lastName);
     }
